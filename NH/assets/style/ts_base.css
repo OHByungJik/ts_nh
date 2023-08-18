@@ -1009,11 +1009,11 @@ a.text-button.disabled{pointer-events:none}
 .list-footer--clickable:active:after{background-color:rgba(0,0,0,.26)}
 
 /* form */
-.form{padding:0 24px}
-.form-control+.form-control{margin-top:12px}
-.form-group:not(.form-group--error):focus-within .form-group__label{color:#1b64da}
-.form-group:not(.form-group--error):focus-within .form-group__help{color:#4e5968;color:var(--adaptiveGrey700)}
-.form-group+.form-group{margin-top:32px}
+.ts--form{padding:0 24px}
+.ts--form-control+.ts--form-control{margin-top:12px}
+.ts--form-group:not(.form-group--error):focus-within .form-group__label{color:#1b64da}
+.ts--form-group:not(.form-group--error):focus-within .form-group__help{color:#4e5968;color:var(--adaptiveGrey700)}
+.ts--form-group+.ts--form-group{margin-top:32px}
 .form--text-field-line .form-group+.form-group{margin-top:20px}
 .form-group__label{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;font-weight:500;line-height:1.3;color:#333d4b;color:var(--adaptiveGrey800);margin-bottom:6px}
 .form--text-field-big .form-group__label{font-size:16px;font-size:var(--toss-font-size-16);font-weight:400}
@@ -1027,11 +1027,11 @@ a.text-button.disabled{pointer-events:none}
 .form-group--horizontal .form-group__controls .form-control+.form-control{margin-top:0;margin-left:8px}
 .form-group--horizontal .form-group__controls .button{-webkit-box-flex:initial;flex:initial;height:52px;width:28%;min-width:0}
 .form-group--error>.form-group__help,.form-group--error>.form-group__label{color:#e42939}
-.form-inline{display:-webkit-box;display:flex}
-.form-inline .form-group{-webkit-box-flex:1;flex:1}
-.form-inline .form-group+.form-group{margin:0 0 0 30px}
-.form-inline+.form-inline{margin-top:32px}
-.form--text-field-line .form-inline+.form-inline{margin-top:20px}
+.ts--form-inline{display:-webkit-box;display:flex}
+.ts--form-inline .ts--form-group{-webkit-box-flex:1;flex:1}
+.ts--form-inline .ts--form-group+.ts--form-group{margin:0 0 0 30px}
+.ts--form-inline+.ts--form-inline{margin-top:32px}
+.form--text-field-line .ts--form-inline+.ts--form-inline{margin-top:20px}
 .form-legend{padding-left:0;padding-right:0;margin-bottom:32px}
 
 .tds-provider{position:relative;height:100%}
