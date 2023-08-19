@@ -1,7 +1,17 @@
 @charset "UTF-8";
 
 /* common */
-html {--ts-font-weight-400: 400; --ts-font-weight-500: 500; --ts-font-weight-600: 600; --ts-font-weight-700: 700; --ts-upper-gap: 24px; --ts-lower-gap: 24px; --ts-content-padding-left:24px; --ts-content-padding-right:24px; --ts-right-vertical-align: center;}
+html {
+	--ts-font-weight-400: 400; --ts-font-weight-500: 500; --ts-font-weight-600: 600; --ts-font-weight-700: 700; 
+	--ts-upper-gap: 24px; --ts-lower-gap: 24px; --ts-content-padding-left:24px; --ts-content-padding-right:24px;  
+	--ts-right-vertical-align: center; 
+	--ts-button-width: 100%; --ts-button-display: flex; --ts-button-border-radius: 16px; --ts-button-min-width: 96px; 
+	--ts-button-height: 56px; --ts-button-max-height: 56px; --ts-button-padding: 15px 16px; --ts-button-font-size:var(--toss-font-size-17); 
+	--ts-button-line-height: var(--toss-line-height-17); --ts-button-dimmer-background: rgba(0, 0, 0, 0.26); --ts-button-disabled-all-opacity: 0.26; --ts-button-background-color: var(--adaptiveGreen600); 
+	--ts-button-color: #fff; --ts-button-loader-animation-width: 26px; --ts-button-loader-animation-height: 26px;
+	--ts-button-loader-animation-margin-right: 8px; 
+	--ts-bottom-cta-padding-bottom: 16px; --ts-bottom-cta-padding: 0 20px 16px 20px; --ts-bottom-cta-background: var(--adaptiveBackground);
+}
 
 .ts--top-wrapper {display: flex; flex-direction: column; min-width:0; width: 100%; padding-top: var(--ts-upper-gap); padding-bottom: var(--ts-lower-gap);}
 .ts--top-area {display: flex; flex-direction:column; flex: 1 1 0%; -webkit-box-pack: center; justify-content: center; min-width: 0; padding-left: var(--ts-content-padding-left); padding-right: var(--ts-content-padding-right);}
@@ -17,5 +27,9 @@ html {--ts-font-weight-400: 400; --ts-font-weight-500: 500; --ts-font-weight-600
 /* form */
 .ts--form-group::before {content:''; display:block; height:24px; width: 100%;}
 
-.ts--bottom-wrapper {position:fixed; left:50%; right: auto; bottom: 0; z-index: 50; transform: translateX(-50%); padding-bottom: 16px;}
+.ts--bottom-wrapper {width: 100%; position:fixed; left:50%; right: auto; bottom: 0; z-index: 50; transform: translateX(-50%); padding-bottom: 16px; padding: var(--ts-bottom-cta-padding);}
+.ts--bottom-cta__button {width: var(--ts-button-width); height: var(--ts-button-height); -webkit-box-align: center; justify-content: center; align-items:center; display: var(--ts-button-display); background-color: var(--ts-button-background-color); border-radius: var(--ts-button-border-radius); font-size: var(--ts-button-font-size); line-height: var(--ts-button-line-height); color: var(--ts-button-color); transition:color 0.1s ease-in-out 0s, background-color 0.1s ease-in-out 0s, border-color 0.1s ease-in-out 0s, box-shadow 0.1s ease-in-out 0s, opacity 0.1s ease-in-out 0s; font-weight: 600; -webkit-box-pack: center; position: relative; white-space: nowrap; user-select:  none; overflow: hidden; transform: translateZ(0px); border: 0 solid transparent;}
+.ts--bottom-cta__button:not(:disabled):active {background-color: var(--button-active-background-color, var(--button-background-color))}
+.ts--bottom-cta__button:hover, .ts--bottom-cta__button:focus {text-decoration: none;}
 .ts--bottom-note {width: 100%; text-align: center; color: var(--adaptiveGrey700);}
+* ~ .ts--bottom-note {padding-top: 16px;}
