@@ -1,3 +1,6 @@
+textField();
+createBottomCtaSvg();
+
 // text field 
 function textField() {
     const textInput = document.querySelectorAll('.text-field');
@@ -14,23 +17,10 @@ function textField() {
     }) 
 }
 
-function createButtomCtaSvg() {
-    const bottomCtaButton = document.querySelector('.ts--bottom-cta__button');
-    bottomCtaButton.addEventListener('click', function(e){
-        const buttomCtaTarget = e.target;
-        const bottomCtaLottie = buttomCtaTarget.querySelector('.ts--bottom-cta__loading');
-        buttomCtnAnimation();
-        
-        bottomCtaLottie.classList.add('on--load')
-        setTimeout(function(){
-            bottomCtaLottie.classList.remove('on--load');
-        }, 3000)
-    });
-}
-
-function buttomCtnAnimation() {
+// BottomCtaAnimation
+function bottomCtnAnimation() {
     const bottomCtaLoading = document.querySelector('.ts--bottom-cta__loading');
-    var lottieAnim = lottie.loadAnimation({
+    var buttonCtaLottie = lottie.loadAnimation({
         container: bottomCtaLoading,
         renderer: 'svg',
         loop: true,
@@ -41,5 +31,19 @@ function buttomCtnAnimation() {
         lottie.destroy();
     }, 3000)
 }
-textField();
-createButtomCtaSvg();
+
+function createBottomCtaSvg() {
+    const bottomCtaButton = document.querySelector('.ts--bottom-cta__button');
+    bottomCtaButton.addEventListener('click', function(e){
+        const buttomCtaTarget = e.target;
+        const bottomCtaLottie = buttomCtaTarget.querySelector('.ts--bottom-cta__loading');
+        bottomCtnAnimation();
+
+        bottomCtaLottie.classList.add('on--load')
+        setTimeout(function(){
+            bottomCtaLottie.classList.remove('on--load');
+        }, 3000)
+    });
+}
+
+
