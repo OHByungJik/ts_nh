@@ -28,7 +28,6 @@ html {
 
 /* form */
 .ts--form-group::before {content:''; display:block; height:24px; width: 100%;}
-
 .ts--text-field-container {padding: 16px 0;}
 .ts--text-field-container .form-group__label {line-height: var(--toss-line-height-13);}
 .ts--text-field-container:focus-within .form-group__label {color:#1b64da}
@@ -40,6 +39,7 @@ html {
 
 .ts--bottom-wrapper {width: 100%; position:fixed; left:50%; right: auto; bottom: 0; z-index: 50; transform: translateX(-50%); padding-bottom: 16px; padding: var(--ts-bottom-cta-padding);}
 .ts--bottom-cta__button {width: var(--ts-button-width); height: var(--ts-button-height); -webkit-box-align: center; justify-content: center; align-items:center; display: var(--ts-button-display); background-color: var(--ts-button-background-color); border-radius: var(--ts-button-border-radius); font-size: var(--ts-button-font-size); line-height: var(--ts-button-line-height); color: var(--ts-button-color); transition:color 0.1s ease-in-out 0s, background-color 0.1s ease-in-out 0s, border-color 0.1s ease-in-out 0s, box-shadow 0.1s ease-in-out 0s, opacity 0.1s ease-in-out 0s; font-weight: 600; -webkit-box-pack: center; position: relative; white-space: nowrap; user-select:  none; overflow: hidden; transform: translateZ(0px); border: 0 solid transparent;}
+.ts--bottom-cta__button:disabled {cursor: default; pointer-events: none; opacity:var(--ts-button-disabled-all-opacity);}
 .ts--bottom-cta__button:not(:disabled):active {background-color: var(--button-active-background-color, var(--button-background-color))}
 .ts--bottom-cta__button:hover, .ts--bottom-cta__button:focus {text-decoration: none;}
 .ts--bottom-cta__content {display: flex; -webkit-box-align: center; justify-content: center; align-items:center;}
