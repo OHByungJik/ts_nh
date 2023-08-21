@@ -52,7 +52,9 @@ html {
 .ts--text-field-underline {resize: none; outline: none; border: none; background-color: transparent; padding: 0; margin: 0; font-size: inherit; line-height: inherit; color: inherit; width: 100%; caret-color: rgb(49, 130, 246); font-weight: inherit;}
 .ts--text-field-container .text-field input::placeholder {color: var(--ts-text-field-line-placeholder-color)}
 
-.ts--bottom-wrapper {width: 100%; position:fixed; left:50%; right: auto; bottom: 0; z-index: 50; transform: translateX(-50%); padding-bottom: 16px; padding: var(--ts-bottom-cta-padding);}
+.ts--bottom-wrapper {width: 100%; position:fixed; left:50%; right: auto; bottom: 0; z-index: 50; transform: translateX(-50%);}
+.ts--bottom-wrapper::before {content:''; height: 34px; display: block; background: var(--tGradientToTop);}
+.ts--bottom-wrapper .tds-mobile-bottom-cta--a__content {padding: var(--ts-bottom-cta-padding); padding-bottom: 16px;}
 .ts--bottom-cta__button {width: var(--ts-button-width); height: var(--ts-button-height); -webkit-box-align: center; justify-content: center; align-items:center; display: var(--ts-button-display); background-color: var(--ts-button-background-color); border-radius: var(--ts-button-border-radius); font-size: var(--ts-button-font-size); line-height: var(--ts-button-line-height); color: var(--ts-button-color); transition:color 0.1s ease-in-out 0s, background-color 0.1s ease-in-out 0s, border-color 0.1s ease-in-out 0s, box-shadow 0.1s ease-in-out 0s, opacity 0.1s ease-in-out 0s; font-weight: 600; -webkit-box-pack: center; position: relative; white-space: nowrap; user-select:  none; overflow: hidden; transform: translateZ(0px); border: 0 solid transparent;}
 .ts--bottom-cta__button:disabled {cursor: default; pointer-events: none; opacity:var(--ts-button-disabled-all-opacity);}
 .ts--bottom-cta__button:not(:disabled):active {background-color: var(--button-active-background-color, var(--button-background-color))}
