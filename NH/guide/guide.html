@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="guide.css">
+    <link rel="stylesheet" href="../assets/style/ts_style.css">
+</head>
+<body class="bg-body-tertiary">
+    <header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
+        <div class="container-fluid d-flex align-items-center">
+            <h1 class="d-flex align-items-center fs-4 text-white mb-0">
+                Component Guide
+            </h1>
+        </div>
+    </header>
+    <aside class="bd-aside sticky-xl-top text-body-secondary align-self-start mb-3 mb-xl-5 px-2">
+        <h2 class="h6 pt-4 pb-3 mb-4 border-bottom">On this page</h2>
+        <nav class="small" id="toc">
+            <ul class="list-unstyled">
+            <li class="my-2">
+                <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Contents</button>
+                <ul class="list-unstyled ps-3 collapse" id="contents-collapse">
+                <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#typography">Typography</a></li>
+                <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#images">Images</a></li>
+                <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#figures">Figures</a></li>
+                </ul>
+            </li>
+            <li class="my-2">
+                <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#forms-collapse" aria-controls="forms-collapse">Forms</button>
+                <ul class="list-unstyled ps-3 collapse" id="forms-collapse">
+                <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#overview">Overview</a></li>
+                <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#disabled-forms">Disabled forms</a></li>
+                <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#input-group">Input group</a></li>
+                </ul>
+            </li>
+            <li class="my-2">
+                <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#components-collapse" aria-controls="components-collapse">Components</button>
+                <ul class="list-unstyled ps-3 collapse" id="components-collapse">
+                <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#badge">Badge</a></li>
+                <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#buttons">Buttons</a></li>
+                <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#button-group">Button group</a></li>
+                <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#list-group">List group</a></li>
+                <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#modal">Modal</a></li>
+                <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#navbar">Navbar</a></li>
+                <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#popovers">Popovers</a></li>
+                <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#scrollspy">Scrollspy</a></li>
+                <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#spinners">Spinners</a></li>
+                <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#toasts">Toasts</a></li>
+                <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#tooltips">Tooltips</a></li>
+                </ul>
+            </li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="bd-cheatsheet container-fluid bg-body">
+        <section id="content">
+          <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Contents</h2>
+          <article class="my-3" id="typography">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                <h3>Typography</h3>
+            </div>
+            <div>
+                <div class="bd-example-snippet bd-code-snippet">
+                    <div class="bd-example m-0 border-0">
+                        <h4>- Title Only -</h4>
+                        <!-- 타이틀1 -->
+                        <div class="ts--top-wrapper">
+                            <div class="ts--top-area">
+                                <div class="ts--subtitle1">
+                                    <span role="text">직업 분류를 선택해주세요</span>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <h4>- Title + Subtitle -</h4>
+                        <!-- 타이틀2 -->
+                        <div class="ts--top-wrapper">
+                            <div class="ts--top-area">
+                                <div class="ts--subtitle1">
+                                    <span role="text">회사 주소를 입력해주세요</span>
+                                </div>
+                                <div class="ts--subtitle2">
+                                    <span role="text">대출 안내를 위해 필요해요.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+          </article>
+        </section>
+        <section id="form">
+            <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Forms</h2>
+            <article class="my-3" id="input-group">
+                <h3>Input Group</h3>
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <h4>- Text Input -</h4>
+                            <form action="" class="ts--form">
+                                <div class="ts--form-group">
+                                    <label for="" class="form-group__label typography-t7">주소</label>
+                                    <div class="form-group__controls">
+                                        <div class="text-field ts--form-control">
+                                            <input type="text" class="text-field__input" placeholder="건물, 지번 또는 도로명 검색" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <hr>
+                            <h4>- Text Input Underline -</h4>
+                            <form action="" class="ts--form">
+                                <div class="ts--text-field-container">
+                                    <label for="" class="form-group__label typography-t7">회사 전화번호</label>
+                                    <div class="form-group__controls">
+                                        <div class="text-field ts--form-control">
+                                            <input type="tel" class="ts--text-field-underline" placeholder="회사 전화번호" value="" autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section id="components">
+            <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Components</h2>
+            <article class="my-3" id="badge">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Badge</h3>
+                </div>
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <h4>- Badge Large -</h4>
+                            <div>
+                                <span class="badge badge--type-teal badge--size-large">Badge Teal</span>
+                                <span class="badge badge--type-green badge--size-large">Badge Green</span>
+                                <span class="badge badge--type-red badge--size-large">Badge Red</span>
+                                <span class="badge badge--type-yellow badge--size-large">Badge Yellow</span>
+                                <span class="badge badge--type-blue badge--size-large">Badge Blue</span>
+                                <span class="badge badge--type-elephant badge--size-large">Badge Elephant</span>
+                            </div>
+                            <hr>
+                            <h4>- Badge Medium -</h4>
+                            <div>
+                                <span class="badge badge--type-teal badge--size-medium">Badge Teal</span>
+                                <span class="badge badge--type-green badge--size-medium">Badge Green</span>
+                                <span class="badge badge--type-red badge--size-medium">Badge Red</span>
+                                <span class="badge badge--type-yellow badge--size-medium">Badge Yellow</span>
+                                <span class="badge badge--type-blue badge--size-medium">Badge Blue</span>
+                                <span class="badge badge--type-elephant badge--size-medium">Badge Elephant</span>
+                            </div>
+                            <hr>
+                            <h4>- Badge Small -</h4>
+                            <div>
+                                <span class="badge badge--type-teal badge--size-small">Badge Teal</span>
+                                <span class="badge badge--type-green badge--size-small">Badge Green</span>
+                                <span class="badge badge--type-red badge--size-small">Badge Red</span>
+                                <span class="badge badge--type-yellow badge--size-small">Badge Yellow</span>
+                                <span class="badge badge--type-blue badge--size-small">Badge Blue</span>
+                                <span class="badge badge--type-elephant badge--size-small">Badge Elephant</span>
+                            </div>
+                            <hr>
+                            <h4>- Badge Light Large -</h4>
+                            <div>
+                                <span class="badge badge--type-teal badge--size-large badge--style-weak">Badge Teal</span>
+                                <span class="badge badge--type-green badge--size-large badge--style-weak">Badge Green</span>
+                                <span class="badge badge--type-red badge--size-large badge--style-weak">Badge Red</span>
+                                <span class="badge badge--type-yellow badge--size-large badge--style-weak">Badge Yellow</span>
+                                <span class="badge badge--type-blue badge--size-large badge--style-weak">Badge Blue</span>
+                                <span class="badge badge--type-elephant badge--size-large badge--style-weak">Badge Elephant</span>
+                            </div>
+                            <hr>
+                            <h4>- Badge Light Medium -</h4>
+                            <div>
+                                <span class="badge badge--type-teal badge--size-medium badge--style-weak">Badge Teal</span>
+                                <span class="badge badge--type-green badge--size-medium badge--style-weak">Badge Green</span>
+                                <span class="badge badge--type-red badge--size-medium badge--style-weak">Badge Red</span>
+                                <span class="badge badge--type-yellow badge--size-medium badge--style-weak">Badge Yellow</span>
+                                <span class="badge badge--type-blue badge--size-medium badge--style-weak">Badge Blue</span>
+                                <span class="badge badge--type-elephant badge--size-medium badge--style-weak">Badge Elephant</span>
+                            </div>
+                            <hr>
+                            <h4>- Badge Light Small -</h4>
+                            <div>
+                                <span class="badge badge--type-teal badge--size-small badge--style-weak">Badge Teal</span>
+                                <span class="badge badge--type-green badge--size-small badge--style-weak">Badge Green</span>
+                                <span class="badge badge--type-red badge--size-small badge--style-weak">Badge Red</span>
+                                <span class="badge badge--type-yellow badge--size-small badge--style-weak">Badge Yellow</span>
+                                <span class="badge badge--type-blue badge--size-small badge--style-weak">Badge Blue</span>
+                                <span class="badge badge--type-elephant badge--size-small badge--style-weak">Badge Elephant</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="list-group">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>List Group</h3>
+                </div>
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <h4>- 리스트 -</h4>
+                            <!-- 기본 선택 리스트 -->
+                            <ul class="ts--list">
+                                <li class="ts--list-row list-row--vertical-padding-small list-row--has-action">
+                                    <a href="javascript:void(0);" class="list-row__content-and-right-container">
+                                        <span class="list-row__content">
+                                            <span role="text" class="typography-t5 ts-text text--font-weight-medium text--display-inline-block">
+                                                기업체, 단체 소속
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="ts--list-row list-row--vertical-padding-small list-row--has-action">
+                                    <a href="javascript:void(0);" class="list-row__content-and-right-container">
+                                        <span class="list-row__content">
+                                            <span role="text" class="typography-t5 ts-text text--font-weight-medium text--display-inline-block">
+                                                정부, 지자체 소속
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="ts--list-row list-row--vertical-padding-small list-row--has-action">
+                                    <a href="javascript:void(0);" class="list-row__content-and-right-container">
+                                        <span class="list-row__content">
+                                            <span role="text" class="typography-t5 ts-text text--font-weight-medium text--display-inline-block">
+                                                공공기관, 사립교육기관 소속
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="ts--list-row list-row--vertical-padding-small list-row--has-action">
+                                    <a href="javascript:void(0);" class="list-row__content-and-right-container">
+                                        <span class="list-row__content">
+                                            <span role="text" class="typography-t5 ts-text text--font-weight-medium text--display-inline-block">
+                                                개인사업자
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="ts--list-row list-row--vertical-padding-small list-row--has-action">
+                                    <a href="javascript:void(0);" class="list-row__content-and-right-container">
+                                        <span class="list-row__content">
+                                            <span role="text" class="typography-t5 ts-text text--font-weight-medium text--display-inline-block">
+                                                기타
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- // 기본 선택 리스트 -->
+                            <hr>
+                            <h4>- 주소록 검색결과 리스트 -</h4>
+                            <!-- 주소록 list-->
+                            <div class="ts--list-wrapper">
+                                <div class="ts--list-header">
+                                    <div class="ts--list-title">
+                                        <div class="ts--list-title-content">
+                                            <span role="text">아크</span>
+                                            <span role="text">&nbsp;검색 결과</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="ts--list">
+                                    <li class="ts--list-row list-row--vertical-padding-small list-row--has-action">
+                                        <a href="javascript:void(0);" class="list-row__content-and-right-container">
+                                            <span class="list-row__content">
+                                                <span role="text" class="postal-code ts-text">
+                                                    04117
+                                                </span>
+                                                <div class="ts--address-new">
+                                                    <span class="badge badge--type-blue badge--size-small badge--style-weak">도로명</span>
+                                                    <span role="text" class="ts-text typography-t7 text--font-weight-normal text--display-inline-block">서울특별시 용산구 한남대로40길 85(한남아크빌)</span>
+                                                </div>
+                                                <div class="ts--address-old">
+                                                    <span class="badge badge--type-elephant badge--size-small badge--style-weak">구주소</span>
+                                                    <span role="text" class="ts-text typography-t7 text--font-weight-normal text--display-inline-block">서울특별시 용산구 한남대로40길 85(한남아크빌)</span>
+                                                </div>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="ts--list-row list-row--vertical-padding-small list-row--has-action">
+                                        <a href="javascript:void(0);" class="list-row__content-and-right-container">
+                                            <span class="list-row__content">
+                                                <span role="text" class="postal-code ts-text">
+                                                    04118
+                                                </span>
+                                                <div class="ts--address-new">
+                                                    <span class="badge badge--type-blue badge--size-small badge--style-weak">도로명</span>
+                                                    <span role="text" class="ts-text typography-t7 text--font-weight-normal text--display-inline-block">서울특별시 용산구 한남대로40길 84(한남아크빌)</span>
+                                                </div>
+                                                <div class="ts--address-old">
+                                                    <span class="badge badge--type-elephant badge--size-small badge--style-weak">구주소</span>
+                                                    <span role="text" class="ts-text typography-t7 text--font-weight-normal text--display-inline-block">서울특별시 용산구 한남대로40길 84(한남아크빌)</span>
+                                                </div>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- // 주소록 list-->
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="buttons">
+                <h3>Input Group</h3>
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <h4>- Bottom CTA Button -</h4>
+                            <button type="submit" class="ts--bottom-cta__button tds-mobile-button tds-mobile-bottom-cta__button">
+                                <div class="ts--bottom-cta__content">
+                                    <span class="ts--bottom-cta__loading lottie"></span>
+                                    <span class="ts--bottom-cta__text">다음</span>
+                                </div>
+                            </button>
+                            <button type="submit" class="ts--bottom-cta__button tds-mobile-button tds-mobile-bottom-cta__button" disabled>
+                                <div class="ts--bottom-cta__content">
+                                    <span class="ts--bottom-cta__loading lottie"></span>
+                                    <span class="ts--bottom-cta__text">다음</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="../assets/js/lib/lottie.min.js"></script>
+    <script type="module" src="../assets/js/ts_common.js"></script>
+</body>
+</html>
