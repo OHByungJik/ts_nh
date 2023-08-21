@@ -1,7 +1,7 @@
 textField();
 createBottomCtaSvg();
 errorSpotAnimation();
-confettiSpotAnimation()
+confettiSpotAnimation();
 emptySpotAnimation();
 idScanAnimation()
 transferLoadingAnimation()
@@ -31,7 +31,7 @@ function bottomCtnAnimation() {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: '../../assets/img/json/loading-white-spot.json'
+        path: '../assets/img/json/loading-white-spot.json'
     })
     setTimeout(function(){
         lottie.destroy();
@@ -60,24 +60,24 @@ function errorSpotAnimation() {
             renderer: 'svg',
             loop: false,
             autoplay: true,
-            path: '../../assets/img/json/error-2-spot.json'
+            path: '../assets/img/json/error-2-spot.json'
         })
-       
+        
     });
     
 }
 
 function confettiSpotAnimation() {
     const confettiSpotAni = document.querySelectorAll('.ts--confetti-spot__ico');
-    confetti.forEach(function(e){
+    confettiSpotAni.forEach(function(e){
         var confettiSpotLottie = lottie.loadAnimation({
             container: e,
             renderer: 'svg',
             loop: false,
             autoplay: true,
-            path: '../../assets/img/json/confetti-spot.json'
+            path: '../assets/img/json/confetti-spot.json'
         })
-       
+    
     });
     
 }
@@ -90,7 +90,7 @@ function emptySpotAnimation() {
             renderer: 'svg',
             loop: false,
             autoplay: true,
-            path: '../../assets/img/json/empty-spot.json'
+            path: '../assets/img/json/empty-spot.json'
         })
     
     });
@@ -105,7 +105,7 @@ function idScanAnimation() {
             renderer: 'svg',
             loop: false,
             autoplay: true,
-            path: '../../assets/img/json/4_id-scan.json'
+            path: '../assets/img/json/4_id-scan.json'
         });
     });
 }
@@ -118,7 +118,7 @@ function transferLoadingAnimation() {
             renderer: 'svg',
             loop: true,
             autoplay: true,
-            path: '../../assets/img/json/transfer-2.json'
+            path: '../assets/img/json/transfer-2.json'
         });
     })
 }
@@ -131,10 +131,7 @@ function screeningAnimation() {
             renderer: 'svg',
             loop: true,
             autoplay: true,
-            path: '../../assets/img/json/no-loan-load-light.json'
+            path: '../assets/img/json/no-loan-load-light.json'
         })
     })
 }
-
-
-
