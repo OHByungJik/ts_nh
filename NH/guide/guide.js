@@ -52,6 +52,22 @@ function textField() {
 //         name: 'myAnimation',
 //     };
 //     anim = bodymovin.loadAnimation(animData);
+// function start(){
+//     var anim;
+// var animdata ={
+//     container: document.getElementById("velkommen"),
+//     renderer: "svg",
+//     loop: false,
+//     autoplay: true,
+//     path: "data.json"
+// };
+// anim = bodymovin.loadAnimation(animdata);
+// anim.addEventListener('complete',stopa);
+// }
+
+// function stopa(){
+//     document.getElementById("velkommen").style.display = "none";
+// }
 // }
 
 // BottomCtaAnimation
