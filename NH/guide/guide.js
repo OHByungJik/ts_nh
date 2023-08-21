@@ -23,6 +23,37 @@ function textField() {
     }) 
 }
 
+
+
+// function lottieTrigger() {
+//     var container = document.getElementById('container');
+//     var animData = {
+//             container: container,
+//             renderer: 'svg',
+//             loop: false,
+//             prerender: false,
+//             autoplay: false,
+//             autoloadSegments: false,
+//             path: directory_uri+'/js/data.json'
+//         };
+//     anim = bodymovin.loadAnimation(animData);
+
+//     var anim;
+//     var elem = document.getElementById('bodymovin')
+//     var animData = {
+//         container: elem,
+//         renderer: 'svg',
+//         loop: false,
+//         autoplay: false,   /*MAKE SURE THIS IS FALSE*/
+//         rendererSettings: {
+//             progressiveLoad:false
+//         },
+//         path: 'data.json',
+//         name: 'myAnimation',
+//     };
+//     anim = bodymovin.loadAnimation(animData);
+// }
+
 // BottomCtaAnimation
 function bottomCtnAnimation() {
     const bottomCtaLoading = document.querySelector('.ts--bottom-cta__loading');
