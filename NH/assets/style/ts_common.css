@@ -30,13 +30,16 @@ html {
 /* badge */
 [class*="ts--address-"] {margin-top: 2px; -webkit-box-align: center; display: flex; flex-direction: row; -webkit-box-pack: start; justify-content: flex-start; align-items: center;}
 [class*="ts--address-"] > .badge {margin-right: 6px;}
+[class*="ts--address-"] > span[role="text"] {color: var(--adaptiveGrey800); max-width: 100%; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; font-size: var(--toss-font-size-13); font-weight: var(--ts-font-weight-400); display: inline-block;}
 .ts--address-new {margin-top: 4px;}
+.ts--address-old > span[role="text"] {color: var(--adaptiveGrey500);}
 
 /* list */
 .ts--list-header {display: flex; flex-direction: var(--ts-list-header-flex-direction); padding: 24px 0 8px; width: 100%; min-width: 0; user-select: none; word-break: keep-all; white-space: pre-wrap;}
 .ts--list-title {margin-top: var(--ts-list-header-margin-top); margin-bottom: var(--ts-list-header-margin-bottom); display: flex; -webkit-box-pack: justify; justify-content: space-between; width: 100%;}
 .ts--list-title-content {display: flex; -webkit-box-align: center; align-items:center; padding-left: 24px; height: fit-content; font-weight: var(--ts-font-weight-700); color: var(--adaptiveGrey600); font-size: var(--toss-font-size-17);}
-.ts--list-row .postal-code {color: var(--adaptiveGrey800); display:inline-block; font-weight: 500; font-size:15px;font-weight:var(--ts-font-weight-500);line-height:1.3;}
+.list-row__content > span[role="text"] {font-size: var(--toss-font-size-17); line-height:1.3; display: inline-block; font-weight: 500; color: var(--adaptiveGrey700); max-width: 100%; overflow:hidden; text-overflow: ellipsis;}
+.ts--list-row .list-row__content .postal-code {color: var(--adaptiveGrey800); display:inline-block; font-weight: 500; font-size:15px;font-weight:var(--ts-font-weight-500);line-height:1.3;}
 
 /* form */
 .ts--form-group::before {content:''; display:block; height:24px; width: 100%;}
