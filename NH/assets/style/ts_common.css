@@ -13,6 +13,7 @@ html {
 	--ts-bottom-cta-padding-bottom: 16px; --ts-bottom-cta-padding: 0 20px 16px 20px; --ts-bottom-cta-background: var(--adaptiveBackground);
 	--ts-text-field-container-children-gap: 12px 8px; --ts-text-field-container-children-padding: 24px; --ts-text-field-container-span-padding-bottom: 6px; --ts-text-field-label-color: var(--adaptiveGrey800); --ts-text-field-hint-color: var(--adativeGrey600);
 	--ts-text-field-line-border-color: var(--adaptiveGrey100); --ts-text-field-webkit-text-fill-color: none; --ts-text-field-line-placeholder-color: var(--adaptiveGrey500); --ts-text-field-line-color: var(--adaptiveGrey800);
+	--ts-list-header-flex-direction: column; --ts-list-header-margin-top: 3px; --ts-list-header-margin-bottom: 0px;
 }
 
 .ts--top-wrapper {display: flex; flex-direction: column; min-width:0; width: 100%; padding-top: var(--ts-upper-gap); padding-bottom: var(--ts-lower-gap);}
@@ -25,6 +26,17 @@ html {
 .ts--subtitle1 > span {font-size:var(--toss-font-size-22);line-height:var(--toss-line-height-22); font-weight:var(--ts-font-weight-700); color: var(--adaptiveGrey900);}
 .ts--subtitle2 {display: flex; flex-direction:column; padding-top: 4px;font-size:17px;font-size:var(--toss-font-size-17);color:var(--adaptiveGrey600);}
 .ts--subtitle2 > span {font-size:var(--toss-font-size-17);line-height:var(--toss-line-height-17); font-weight:var(--ts-font-weight-500);color:var(--adaptiveGrey600);}
+
+/* badge */
+[class*="ts--address-"] {margin-top: 2px; -webkit-box-align: center; display: flex; flex-direction: row; -webkit-box-pack: start; justify-content: flex-start; align-items: center;}
+[class*="ts--address-"] > .badge {margin-right: 6px;}
+.ts--address-new {margin-top: 4px;}
+
+/* list */
+.ts--list-header {display: flex; flex-direction: var(--ts-list-header-flex-direction); padding: 24px 0 8px; width: 100%; min-width: 0; user-select: none; word-break: keep-all; white-space: pre-wrap;}
+.ts--list-title {margin-top: var(--ts-list-header-margin-top); margin-bottom: var(--ts-list-header-margin-bottom); display: flex; -webkit-box-pack: justify; justify-content: space-between; width: 100%;}
+.ts--list-title-content {display: flex; -webkit-box-align: center; align-items:center; padding-left: 24px; height: fit-content; font-weight: var(--ts-font-weight-700); color: var(--adaptiveGrey600); font-size: var(--toss-font-size-17);}
+.ts--list-row .postal-code {color: var(--adaptiveGrey800); display:inline-block; font-weight: 500; font-size:15px;font-weight:var(--ts-font-weight-500);line-height:1.3;}
 
 /* form */
 .ts--form-group::before {content:''; display:block; height:24px; width: 100%;}
