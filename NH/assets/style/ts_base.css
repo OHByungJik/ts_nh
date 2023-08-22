@@ -434,10 +434,10 @@ html{--adaptiveGrey50:#f9fafb;--adaptiveGrey100:#f2f4f6;--adaptiveGrey200:#e5e8e
 .has-hairline-before--padding24:before{margin-left:24px;width:calc(100% - 24px)}
 
 /* font-weight */
-.font-weight--regular{font-weight:400}
-.font-weight--medium{font-weight:500}
-.font-weight--semibold{font-weight:600}
-.font-weight--bold{font-weight:700}
+.font-weight--regular{font-weight:400 !important;}
+.font-weight--medium{font-weight:500 !important;}
+.font-weight--semibold{font-weight:600 !important;}
+.font-weight--bold{font-weight:700 !important;}
 
 /* text */
 .ts-text{color:#191f28;color:var(--adaptiveGrey900)}
