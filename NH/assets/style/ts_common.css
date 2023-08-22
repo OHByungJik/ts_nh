@@ -84,6 +84,13 @@ html {
 .post-list-wrapper .post-header {font-size: var(--toss-font-size-16); line-height: var(--toss-line-height-16);}
 .post-list--item+.post-list--item{margin-top:8px}
 
+.ts--agreement-list {list-style: none; margin: 0; padding: 0;}
+.ts--agreement-item {display: flex; padding: 6px 24px;}
+.ts--agreement-item .ts--checkbox__field {margin-right: 8px;}
+.ts--agreement-item {display: flex;}
+.ts--agreement-item a {-webkit-flex-box:1; flex: 1 1 auto; display: flex; justify-content: space-between; color: var(--adaptiveGrey700); font-size: var(--toss-font-size-15); font-weight: var(--ts-font-weight-400);}
+.ts--agreement-item .ts--agreement-arrow-right::after {content: ''; width: 10px; height: 24px; background-image:url('../img/ts_ico/icon-arrow-right-mono.svg'); background-repeat: no-repeat; background-size: cover; background-position: center center; margin-left: 7px;}
+
 /* form */
 .ts--form-group::before {content:''; display:block; height:24px; width: 100%;}
 .ts--text-field-container {padding: 16px 0;}
