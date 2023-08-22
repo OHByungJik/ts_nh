@@ -28,6 +28,26 @@ html {
 [class*="__image"].lottie {max-width: var(--ts-lottie-img-width); max-height: var(--ts-lottie-img-height);}
 [class*="__loading"]:not(.ts--bottom-cta__loading).lottie {max-width: 160px; max-height: 160px;}
 
+/* icons */
+[class*="ts--icon-"] {display: flex; align-items: center; justify-content: center; background-repeat: no-repeat; background-position: center center; background-size: cover;}
+[class*="ts--icon-check"] {width: 24px; height: 24px;}
+[class*="ts--icon-check"] svg {width: 100%; height: 100%;}
+[class*="ts--icon-check"] svg path {stroke: var(--adaptiveGrey200, #e5e8eb); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; fill: none; z-index:-1; stroke-dasharray:1px 1px; stroke-dashoffset: 0;}
+.ts--icon-check-blue svg path {stroke:rgba(49, 130, 246, 1);}
+.ts--icon-arrow-right {width: 24px; height: 24px; background-image:url('../img/ts_ico/icon-arrow-right-mono.svg');}
+.ts--icon-arrow-left {width: 16px; height: 16px; background-image:url('../img/ts_ico/icon-arrow-left-small.svg');}
+.ts--icon-arrow-down {width: 24px; height: 24px; background-image:url('../img/ts_ico/icon-arrow-down-mono.svg'); }
+.ts--icon-monoX {width: 24px; height: 24px; background-image:url('../img/ts_ico/icon-x-mono.svg'); }
+.ts--icon-circleX {width: 24px; height: 24px; background-image:url('../img/ts_ico/icon-x-circle-mono.svg'); }
+.ts--icon-circleCheck {width: 42px; height: 42px; background-image:url('../img/ts_ico/icon-check-circle-green.png'); }
+.ts--icon-circleWarning {width: 24px; height: 24px; background-image:url('../img/ts_ico/icon-warning-circle.svg'); }
+.ts--icon-percent {width: 24px; height: 24px; background-image:url('../img/ts_ico/icon-percent-circle-blue.svg'); }
+.ts--icon-moneybag {width: 24px; height: 24px; background-image:url('../img/ts_ico/icon-money-bag-green.svg'); }
+.ts--icon-dots {width: 42px; height: 42px; background-image:url('../img/ts_ico/icon-dots-fill.png'); }
+.ts--icon-question {width: 24px; height: 24px; background-image:url('../img/ts_ico/icon-question-circle.svg'); }
+.ts--icon-eye {width: 24px; height: 24px; background-image:url('../img/ts_ico/icon-eye-on-mono.svg'); }
+.ts--icon-eye.eye--off {width: 24px; height: 24px; background-image:url('../img/ts_ico/icon-eye-off-mono.svg'); }
+
 /* title */
 [class*="ts--subtitle"] {margin:0; vertical-align:middle; max-width: 100%; display: -webkit-box; word-break:keep-all;/*white-space: pre-wrap;*/}
 [class*="ts--subtitle"] > span {vertical-align: middle; max-width: 100%; margin:0; padding:0; position:relative;}
@@ -53,6 +73,8 @@ html {
 .list-row__content > span[role="text"].bold--highlight {font-size: var(--toss-font-size-17); font-weight: var(--ts-font-weight-700); color: var(--adaptiveGrey800);}
 .list-row__content > span[role="text"].bottom--eyebrow {font-size: var(--toss-font-size-13); color: var(--adaptiveGrey600); font-weight: var(--ts-font-weight-500);}
 .list-row__content > span[role="text"].bottom--info {font-size: var(--toss-font-size-15);  font-weight: var(--ts-font-weight-400);}
+.list-row__content-and-right-container .ts--icon-arrow-right {width: 10px;}
+
 .ts--list-row .list-row__content .postal-code {color: var(--adaptiveGrey800); display:inline-block; font-weight: 500; font-size:15px;font-weight:var(--ts-font-weight-500);line-height:1.3;}
 
 .post-list-wrapper .post-header {font-size: var(--toss-font-size-16); line-height: var(--toss-line-height-16);}
@@ -68,6 +90,14 @@ html {
 .ts--text-field-container .text-field.text-field--focused {border-bottom-color: #4593fc;}
 .ts--text-field-underline {resize: none; outline: none; border: none; background-color: transparent; padding: 0; margin: 0; font-size: inherit; line-height: inherit; color: inherit; width: 100%; caret-color: rgb(49, 130, 246); font-weight: inherit;}
 .ts--text-field-container .text-field input::placeholder {color: var(--ts-text-field-line-placeholder-color)}
+
+/* checkbox */
+.ts--checkbox__field {position: relative; display: flex; width: 24px; height: 100%;}
+.ts--checkbox__input {position:absolute; padding: 0; margin: -1px; border: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; width: 1px; height:1px; appearance: none;}
+.ts--checkbox__label {margin: 0; cursor: pointer; width: 24px; height: 24px;}
+.ts--checkbox__label svg path.check--base {stroke: var(--adaptiveGrey200, #e5e8eb); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; fill: none; z-index:-1; stroke-dasharray:1px 1px; stroke-dashoffset: 0;}
+.ts--checkbox__label svg path:not(.check--base) {stroke: rgba(229, 232, 235, 1); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; fill: none; stroke-dasharray:0 1px; stroke-dashoffset: 0; transition: all 0.6s ease;}
+.ts--checkbox__input:checked + .ts--checkbox__label svg path:not(.check--base) {stroke:rgba(49, 130, 246, 1); stroke-dasharray:1px 1px;  stroke-dashoffset: 0;}
 
 .ts--bottom-wrapper {width: 100%; position:fixed; left:50%; right: auto; bottom: 0; z-index: 50; transform: translateX(-50%);}
 .ts--bottom-wrapper::before {content:''; height: 34px; display: block; background: var(--tGradientToTop);}

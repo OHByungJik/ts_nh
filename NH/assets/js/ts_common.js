@@ -42,9 +42,10 @@ function createBottomCtaSvg() {
         const buttomCtaTarget = e.target;
         const bottomCtaLottie = buttomCtaTarget.querySelector('.ts--bottom-cta__loading');
         bottomCtnAnimation();
-
+        buttomCtaTarget.disabled = true;
         bottomCtaLottie.classList.add('on--load')
         setTimeout(function(){
+            buttomCtaTarget.disabled = false;
             bottomCtaLottie.classList.remove('on--load');
         }, 3000)
     });
@@ -66,7 +67,7 @@ function errorSpotAnimation() {
 
 function confettiSpotAnimation() {
     const confettiSpotAni = document.querySelectorAll('.ts--confetti-spot__ico');
-    confetti.forEach(function(e){
+    confettiSpotAni.forEach(function(e){
         var confettiSpotLottie = lottie.loadAnimation({
             container: e,
             renderer: 'svg',
