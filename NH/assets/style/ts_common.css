@@ -93,7 +93,12 @@ html {
 .ts--text-field-container .text-field:before {display: none;}
 .ts--text-field-container .text-field.text-field--focused {border-bottom-color: #4593fc;}
 .ts--text-field-underline {resize: none; outline: none; border: none; background-color: transparent; padding: 0; margin: 0; font-size: inherit; line-height: inherit; color: inherit; width: 100%; caret-color: rgb(49, 130, 246); font-weight: inherit;}
-.ts--text-field-container .text-field input::placeholder {color: var(--ts-text-field-line-placeholder-color)}
+.ts--text-field-container .text-field input {color: var(--adaptiveGrey800); -webkit-text-fill-color: var(--adaptiveGrey800);}
+.ts--text-field-container .text-field input::placeholder {color: var(--ts-text-field-line-placeholder-color); -webkit-text-fill-color: var(--ts-text-field-line-placeholder-color);}
+.ts--input-clear {background: transparent; border: none; position: absolute; right: 0; appearance: none; display: none; align-items: center; justify-content: center;}
+.ts--input-clear span {margin: -1px; border: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; width: 1px; height:1px; appearance: none;}
+.ts--input-clear::after {content:''; width: 24px; height: 24px; background-image: url(../img/ts_ico/icon-x-circle-mono.svg); display: inline-flex;}
+.ts--input-clear.button-on {display: inline-flex;}
 
 /* checkbox */
 .ts--checkbox__field {position: relative; display: flex; width: 24px; height: 100%;}

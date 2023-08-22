@@ -6,6 +6,31 @@ emptySpotAnimation();
 idScanAnimation();
 transferLoadingAnimation();
 screeningAnimation();
+inputClear();
+
+
+function inputClear() {
+    const inputClearButton = document.querySelectorAll('.ts--input-clear');
+    const underLineInput = document.querySelectorAll('.ts--text-field-underline');
+        underLineInput.forEach(function(el) {
+            el.addEventListener('input', function(elem){
+                if(elem.target.value && elem.target === document.activeElement) {
+                    elem.target.nextElementSibling.classList.add('button-on');
+                } else {
+                    elem.target.nextElementSibling.classList.remove('button-on');
+                }
+            })
+        });
+
+        inputClearButton.forEach(function(e) {
+            e.addEventListener('click', function(ele){
+                const inputValueTarget = ele.target.previousElementSibling;
+                inputValueTarget.value = '';
+                ele.target.classList.remove('button-on');
+            });
+        });
+    
+}
 
 // text field 
 function textField() {
