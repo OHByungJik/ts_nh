@@ -105,7 +105,7 @@ body {
     .bd-example hr {
         margin:40px 0 40px;
     }
-    .bd-example button + button {margin-top: 20px;}
+    /* .bd-example button + button {margin-top: 20px;} */
   
   /* Layout */
   @media (min-width: 1200px) {

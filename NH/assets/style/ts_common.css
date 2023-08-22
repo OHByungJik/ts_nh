@@ -56,6 +56,10 @@ html {
 .ts--subtitle2 {display: flex; flex-direction:column; padding-top: 4px;font-size:17px;font-size:var(--toss-font-size-17);color:var(--adaptiveGrey600);}
 .ts--subtitle2 > span {font-size:var(--toss-font-size-17);line-height:var(--toss-line-height-17); font-weight:var(--ts-font-weight-500);color:var(--adaptiveGrey600);}
 
+/* text */
+.ts--grey-inbox-text {margin: 0 20px; border-radius: 16px; padding: 14px 15px 16px; background-color: var(--adaptiveGrey100);}
+.ts--grey-inbox-text span {color: var(--adaptiveGrey700); font-weight: var(--ts-font-weight-500); display: inline-block; font-size: var(--toss-font-size-13); line-height: var(--toss-line-height-13);}
+
 /* badge */
 [class*="ts--address-"] {margin-top: 2px; -webkit-box-align: center; display: flex; flex-direction: row; -webkit-box-pack: start; justify-content: flex-start; align-items: center;}
 [class*="ts--address-"] > .badge {margin-right: 6px;}
@@ -99,6 +103,10 @@ html {
 .ts--checkbox__label svg path:not(.check--base) {stroke: rgba(229, 232, 235, 1); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; fill: none; stroke-dasharray:0 1px; stroke-dashoffset: 0; transition: all 0.6s ease;}
 .ts--checkbox__input:checked + .ts--checkbox__label svg path:not(.check--base) {stroke:rgba(49, 130, 246, 1); stroke-dasharray:1px 1px;  stroke-dashoffset: 0;}
 
+.ts--grey-button-group {display: flex; -webkit-box-pack: start; padding: 0 24px;}
+.ts--grey-button-group > button {min-width: 52px; height: calc(1em + 19px); max-height: 48px; position: relative; white-space: nowrap; font-weight: 600; -webkit-font-smoothing: antialiased; user-select: none; border: 0 solid transparent; transition:all .1s ease-in-out 0s; overflow: hidden; transform: translateZ(0px); padding: 8px 10px; text-decoration: none; color: var(--adaptiveGrey700); background-color: var(--tDarkWeakButtonBackground); font-size: var(--toss-font-size-13); line-height: var(--toss-line-height-13); border-radius: 6px; display: var(--ts-button-display, inline-flex); width: auto;}
+.ts--grey-button-group button:not(:last-of-type) {margin-right: 8px;}
+.ts--grey-button-group button span {display: inline-flex;}
 .ts--bottom-wrapper {width: 100%; position:fixed; left:50%; right: auto; bottom: 0; z-index: 50; transform: translateX(-50%);}
 .ts--bottom-wrapper::before {content:''; height: 34px; display: block; background: var(--tGradientToTop);}
 .ts--bottom-wrapper .tds-mobile-bottom-cta--a__content {padding: var(--ts-bottom-cta-padding); padding-bottom: 16px;}
