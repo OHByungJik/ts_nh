@@ -3,8 +3,8 @@ createBottomCtaSvg();
 errorSpotAnimation();
 confettiSpotAnimation()
 emptySpotAnimation();
-idScanAnimation()
-transferLoadingAnimation()
+idScanAnimation();
+transferLoadingAnimation();
 screeningAnimation();
 
 // text field 
@@ -29,8 +29,6 @@ function bottomCtnAnimation() {
     var buttonCtaLottie = lottie.loadAnimation({
         container: bottomCtaLoading,
         renderer: 'svg',
-        loop: true,
-        autoplay: true,
         path: '../../assets/img/json/loading-white-spot.json'
     })
     setTimeout(function(){
@@ -59,7 +57,6 @@ function errorSpotAnimation() {
             container: e,
             renderer: 'svg',
             loop: false,
-            autoplay: true,
             path: '../../assets/img/json/error-2-spot.json'
         })
        
@@ -74,7 +71,6 @@ function confettiSpotAnimation() {
             container: e,
             renderer: 'svg',
             loop: false,
-            autoplay: true,
             path: '../../assets/img/json/confetti-spot.json'
         })
        
@@ -89,7 +85,6 @@ function emptySpotAnimation() {
             container: e,
             renderer: 'svg',
             loop: false,
-            autoplay: true,
             path: '../../assets/img/json/empty-spot.json'
         })
     
@@ -104,7 +99,6 @@ function idScanAnimation() {
             container: e,
             renderer: 'svg',
             loop: false,
-            autoplay: true,
             path: '../../assets/img/json/4_id-scan.json'
         });
     });
@@ -116,8 +110,6 @@ function transferLoadingAnimation() {
         var transfer = lottie.loadAnimation({
             container: e,
             renderer: 'svg',
-            loop: true,
-            autoplay: true,
             path: '../../assets/img/json/transfer-2.json'
         });
     })
@@ -129,8 +121,6 @@ function screeningAnimation() {
         var screening = lottie.loadAnimation({
             container: e,
             renderer: 'svg',
-            loop: true,
-            autoplay: true,
             path: '../../assets/img/json/no-loan-load-light.json'
         })
     })
