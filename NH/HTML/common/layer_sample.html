@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
+        <meta name="toss:color-scheme" content="light dark" />
+        <title>레이어 예제</title>
+        <link rel="stylesheet" href="../../assets/style/ts_style.css">
+    </head>
+    <body>
+        <div class="ts--container">
+            <div class="container__content">
+                <div class="ts--top-wrapper">
+                    <div class="ts--top-area">
+                        <div class="ts--subtitle1">
+                            <span role="text">
+                                대출 심사를 시작할게요
+                            </span>
+                        </div>
+                        <div class="ts--subtitle2">
+                            <span role="text">
+                                평균 10초 정도 걸려요
+                            </span>
+                        </div>
+                    </div>                        
+                </div>  
+            </div>
+        </div>
+        <div class="ts--dimmed"></div>
+        <div role="dialog">
+            <div class="ts--dialog-modal">
+                <div class="ts--dialog-modal-wrapper">
+                    <div class="ts--modal-item ts--modal-handler"></div>
+                    <div class="ts--modal-item ts--modal-header">
+                        <div class="ts--modal-title">
+                            <h1 class="ts--modal-h1">어떤 방식으로 대출을 갚을까요?</h1>
+                        </div>
+                    </div>
+                    <div class="ts--modal-item ts--modal-container">
+                        <ul class="ts--list">
+                            <li role="button" class="ts--list-row list-row--vertical-padding-small list-row--has-action">
+                                <a href="javascript:void(0);" class="list-row__content-and-right-container">
+                                    <span class="list-row__content">
+                                        <span role="text">
+                                            기업체, 단체 소속
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li role="button" class="ts--list-row list-row--vertical-padding-small list-row--has-action">
+                                <a href="javascript:void(0);" class="list-row__content-and-right-container">
+                                    <span class="list-row__content">
+                                        <span role="text">
+                                            정부, 지자체 소속
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li role="button"  class="ts--list-row list-row--vertical-padding-small list-row--has-action">
+                                <a href="javascript:void(0);" class="list-row__content-and-right-container">
+                                    <span class="list-row__content">
+                                        <span role="text">
+                                            공공기관, 사립교육기관 소속
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li role="button"  class="ts--list-row list-row--vertical-padding-small list-row--has-action">
+                                <a href="javascript:void(0);" class="list-row__content-and-right-container">
+                                    <span class="list-row__content">
+                                        <span role="text">
+                                            개인사업자
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li role="button" class="ts--list-row list-row--vertical-padding-small list-row--has-action">
+                                <a href="javascript:void(0);" class="list-row__content-and-right-container">
+                                    <span class="list-row__content">
+                                        <span role="text">
+                                            기타
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../../assets/js/lib/anime.min.js"></script>
+        <script type="module" src="../../assets/js/ts_common.js"></script>
+    </body>
+</html>
