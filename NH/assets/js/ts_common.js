@@ -1,5 +1,4 @@
 textField();
-createBottomCtaSvg();
 errorSpotAnimation();
 confettiSpotAnimation()
 emptySpotAnimation();
@@ -8,7 +7,6 @@ transferLoadingAnimation();
 screeningAnimation();
 inputClear();
 switchButton();
-pwHideShow();
 
 function inputClear() {
     const inputClearButton = document.querySelectorAll('.ts--input-clear');
@@ -31,20 +29,6 @@ function inputClear() {
             });
         });
     
-}
-
-function pwHideShow() {
-    const pwShowButton = document.querySelector('.ts--pw-show');
-    pwShowButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        if(e.target.classList.contains('eye-on')) {
-            e.target.classList.remove('eye-on');
-            e.target.previousElementSibling.type = "password"
-        } else {
-            e.target.classList.add('eye-on');
-            e.target.previousElementSibling.type = "text"
-        }
-    })
 }
 
 function switchButton() {
@@ -80,35 +64,6 @@ function textField() {
             focusOut.classList.remove('text-field--focused');
         })
     }) 
-}
-
-// BottomCtaAnimation
-function bottomCtnAnimation() {
-    const bottomCtaLoading = document.querySelector('.ts--bottom-cta__loading');
-    var buttonCtaLottie = lottie.loadAnimation({
-        container: bottomCtaLoading,
-        renderer: 'svg',
-        path: '../../assets/img/json/loading-white-spot.json'
-    })
-    setTimeout(function(){
-        lottie.destroy();
-    }, 3000)
-}
-
-function createBottomCtaSvg() {
-    const bottomCtaButton = document.querySelector('.ts--bottom-cta__button');
-    bottomCtaButton.addEventListener('click', function(e){
-        e.preventDefault();
-        const buttomCtaTarget = e.target;
-        const bottomCtaLottie = buttomCtaTarget.querySelector('.ts--bottom-cta__loading');
-        bottomCtnAnimation();
-        buttomCtaTarget.disabled = true;
-        bottomCtaLottie.classList.add('on--load')
-        setTimeout(function(){
-            buttomCtaTarget.disabled = false;
-            bottomCtaLottie.classList.remove('on--load');
-        }, 3000)
-    });
 }
 
 function errorSpotAnimation() {
@@ -187,5 +142,38 @@ function screeningAnimation() {
     })
 }
 
+
+//BottomCtaAnimation
+function bottomCtnAnimation() {
+    const bottomCtaLoading = document.querySelector('.ts--bottom-cta__loading');
+    var buttonCtaLottie = lottie.loadAnimation({
+        container: bottomCtaLoading,
+        renderer: 'svg',
+        path: '../../assets/img/json/loading-white-spot.json'
+    })
+    setTimeout(function(){
+        lottie.destroy();
+    }, 3000)
+}
+
+function createBottomCtaSvg() {
+    const bottomCtaButton = document.querySelectorAll('.ts--bottom-cta__button');
+    bottomCtaButton.forEach(function(ele){
+        ele.addEventListener.addEventListener('click', function(e){
+            e.preventDefault();
+            const buttomCtaTarget = e.target;
+            const bottomCtaLottie = buttomCtaTarget.querySelector('.ts--bottom-cta__loading');
+            bottomCtnAnimation();
+            buttomCtaTarget.disabled = true;
+            bottomCtaLottie.classList.add('on--load')
+            setTimeout(function(){
+                buttomCtaTarget.disabled = false;
+                bottomCtaLottie.classList.remove('on--load');
+            }, 3000)
+        });
+    })
+
+}
+createBottomCtaSvg();
 
 
