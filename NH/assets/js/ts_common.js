@@ -95,7 +95,6 @@ function confettiSpotAnimation() {
         var confettiSpotLottie = lottie.loadAnimation({
             container: e,
             renderer: 'svg',
-            loop: false,
             path: '../../assets/img/json/confetti-spot.json'
         })
        
