@@ -8,6 +8,7 @@ transferLoadingAnimation();
 screeningAnimation();
 inputClear();
 switchButton();
+pwHideShow();
 
 function inputClear() {
     const inputClearButton = document.querySelectorAll('.ts--input-clear');
@@ -30,6 +31,20 @@ function inputClear() {
             });
         });
     
+}
+
+function pwHideShow() {
+    const pwShowButton = document.querySelector('.ts--pw-show');
+    pwShowButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        if(e.target.classList.contains('eye-on')) {
+            e.target.classList.remove('eye-on');
+            e.target.previousElementSibling.type = "password"
+        } else {
+            e.target.classList.add('eye-on');
+            e.target.previousElementSibling.type = "text"
+        }
+    })
 }
 
 function switchButton() {
