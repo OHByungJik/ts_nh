@@ -111,6 +111,15 @@ html {
 .ts--input-clear::after {content:''; width: 24px; height: 24px; background-image: url(../img/ts_ico/icon-x-circle-mono.svg); display: inline-flex;}
 .ts--input-clear.button-on {display: inline-flex;}
 
+.ts--switch-buttons {position: relative; list-style:none; display: flex; background-color: var(--adaptiveGrey100); padding: 4px 5px; border-radius: 14px; width: 100%;}
+.ts--switch-buttons::before {content: ''; position: absolute; width: calc(50% - 8px); height: calc(100% - 8px); flex: 0 0 50%; display: block; left: 4px; top: 4px; z-index: 1; background-color: #fff; box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 2px 0px; border-radius: 10px; transition: all 200ms ease;}
+.ts--switch-buttons.switch-on-right::before {left: 50%;}
+.ts--switch-buttons li {position: relative; display: flex;  flex: 1 1 0%; justify-content: center; align-items: center; -webkit-box-align: center; -webkit-box-pack: center; overflow: hidden;}
+.ts--switch-buttons input[type="radio"] {position:absolute; padding: 0; margin: -1px; border: 0; overflow: hidden; clip: rect(0, 0, 0, 0); width: 1px; height: 1px; appearance: none;}
+.ts--switch-buttons input[type="radio"]:checked + .ts--switch-button-label {color: var(--adaptiveGrey800); font-size: var(--toss-font-size-17); line-height: var(--toss-line-height-17); font-weight: var(--ts-font-weight-600); word-break: keep-all; white-space: pre-wrap;}
+.ts--switch-buttons li .ts--switch-button-label {width: 100%; padding: 7px 12px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2; color: var(--adaptiveGrey600); font-weight: var(--ts-font-weight-500);}
+
+
 /* checkbox */
 .ts--checkbox__field {position: relative; display: flex; width: 24px; height: 100%;}
 .ts--checkbox__input {position:absolute; padding: 0; margin: -1px; border: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; width: 1px; height:1px; appearance: none;}

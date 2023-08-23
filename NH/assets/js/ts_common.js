@@ -64,6 +64,7 @@ function bottomCtnAnimation() {
 function createBottomCtaSvg() {
     const bottomCtaButton = document.querySelector('.ts--bottom-cta__button');
     bottomCtaButton.addEventListener('click', function(e){
+        e.preventDefault();
         const buttomCtaTarget = e.target;
         const bottomCtaLottie = buttomCtaTarget.querySelector('.ts--bottom-cta__loading');
         bottomCtnAnimation();
