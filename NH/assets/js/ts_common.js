@@ -7,6 +7,9 @@ transferLoadingAnimation();
 screeningAnimation();
 inputClear();
 switchButton();
+createBottomCtaSvg();
+preScreeningLoad();
+
 // listEffect()
 
 // function listEffect() {
@@ -180,6 +183,66 @@ function createBottomCtaSvg() {
     })
 
 }
-createBottomCtaSvg();
+
+function preScreeningLoad() {
+    var colorChanging = anime.timeline({
+        targets: '.ts--subtitle1 .letter',
+        easing: 'easeInOutQuad',
+        direction: 'alternate',
+        loop: true,
+        delay: (el, i) => 150 * (i+1)
+    }).add({
+        color: '#6b7684'
+    }, '+=.1')
+    
+    var preScreening = anime.timeline({
+        easing: 'easeInOutQuad',
+        duration: 900,
+    }).add({
+        targets: '.screening-step1 .ts--subtitle2',
+        translateY: [20, 0],
+        opacity: 1,
+    }).add({
+        targets: '.screening-step1',
+        opacity: 0,
+    }).add({
+        targets: '.screening-step2 .ts--subtitle1',
+        opacity: 1,
+    }).add({
+        targets: '.screening-step2 .ts--subtitle2',
+        translateY: [20, 0],
+        opacity: 1,
+    }).add({
+        targets: '.screening-step2',
+        opacity: 0,
+    }).add({
+        targets: '.screening-step3 .ts--subtitle1',
+        opacity: 1,
+    }).add({
+        targets: '.screening-step3 .ts--subtitle2',
+        translateY: [20, 0],
+        opacity: 1,
+    }).add({
+        targets: '.screening-step3',
+        opacity: 0,
+    }).add({
+        targets: '.screening-step4 .ts--subtitle1',
+        opacity: 1,
+    }).add({
+        targets: '.screening-step4 .ts--subtitle2',
+        translateY: [20, 0],
+        opacity: 1,
+    }).add({
+        targets: '.screening-step4',
+        opacity: 0,
+    }).add({
+        targets: '.screening-step5 .ts--subtitle1',
+        opacity: 1,
+    }).add({
+        targets: '.screening-step5 .ts--subtitle2',
+        translateY: [20, 0],
+        opacity: 1,
+    })
+}
 
 
