@@ -7,7 +7,7 @@ idScanAnimation();
 transferLoadingAnimation();
 screeningAnimation();
 inputClear();
-
+switchButton();
 
 function inputClear() {
     const inputClearButton = document.querySelectorAll('.ts--input-clear');
@@ -31,6 +31,25 @@ function inputClear() {
         });
     
 }
+
+function switchButton() {
+    const switchButtonWrap = document.querySelectorAll('.ts--switch-buttons');
+    switchButtonWrap.forEach(function(e) {
+        const switchButton = e.querySelectorAll('input[type="radio"]');
+        switchButton.forEach(function(el) {
+            el.addEventListener('input', function(ele){
+                ele.preventDefault();
+                const eleParent = ele.target.parentNode;
+                if(eleParent === eleParent.parentNode.lastElementChild) {
+                    eleParent.parentNode.classList.add('switch-on-right');
+                } else {
+                    eleParent.parentNode.classList.remove('switch-on-right');
+                }
+            })
+        })
+    });
+}
+
 
 // text field 
 function textField() {
