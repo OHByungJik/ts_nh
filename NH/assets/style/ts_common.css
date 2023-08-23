@@ -107,10 +107,15 @@ html {
 .ts--text-field-container .text-field input {color: var(--adaptiveGrey800); -webkit-text-fill-color: var(--adaptiveGrey800);}
 .ts--text-field-container .text-field input::placeholder {color: var(--ts-text-field-line-placeholder-color); -webkit-text-fill-color: var(--ts-text-field-line-placeholder-color);}
 .ts--input-clear {background: transparent; border: none; position: absolute; right: 0; appearance: none; display: none; align-items: center; justify-content: center;}
-.ts--input-clear span {margin: -1px; border: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; width: 1px; height:1px; appearance: none;}
+.ts--input-clear span,
+.ts--pw-show span {margin: -1px; border: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; width: 1px; height:1px; appearance: none;}
 .ts--input-clear::after {content:''; width: 24px; height: 24px; background-image: url(../img/ts_ico/icon-x-circle-mono.svg); display: inline-flex;}
 .ts--input-clear.button-on {display: inline-flex;}
+.ts--pw-show {margin-right: 14px; background: transparent; border: none; appearance: none; display: flex; align-items: center; justify-content: center;}
+.ts--pw-show::after {content:''; width: 24px; height: 24px; background-image: url(../img/ts_ico/icon-eye-off-mono.svg); display: inline-flex;}
+.ts--pw-show.eye-on::after {background-image: url(../img/ts_ico/icon-eye-on-mono.svg);}
 
+/* switch buttons */
 .ts--switch-buttons {position: relative; list-style:none; display: flex; background-color: var(--adaptiveGrey100); padding: 4px 5px; border-radius: 14px; width: 100%;}
 .ts--switch-buttons::before {content: ''; position: absolute; width: calc(50% - 8px); height: calc(100% - 8px); flex: 0 0 50%; display: block; left: 4px; top: 4px; z-index: 1; background-color: #fff; box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 2px 0px; border-radius: 10px; transition: all 200ms ease;}
 .ts--switch-buttons.switch-on-right::before {left: calc(50% + 4px);}
