@@ -7,6 +7,12 @@ transferLoadingAnimation();
 screeningAnimation();
 inputClear();
 switchButton();
+// listEffect()
+
+// function listEffect() {
+//     const listItem = document.querySelectorAll('[role="button"]');
+//     console.log(listItem);
+// }
 
 function inputClear() {
     const inputClearButton = document.querySelectorAll('.ts--input-clear');
