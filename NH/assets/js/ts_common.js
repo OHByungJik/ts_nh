@@ -1,21 +1,16 @@
-textField();
-errorSpotAnimation();
-confettiSpotAnimation()
-emptySpotAnimation();
-idScanAnimation();
-transferLoadingAnimation();
-screeningAnimation();
-inputClear();
-switchButton();
-createBottomCtaSvg();
-preScreeningLoad();
+textField(); // text input
+pwHideShow(); // pw input
+errorSpotAnimation(); // error spot 로티
+confettiSpotAnimation() // confetti spot 로티
+emptySpotAnimation(); // empty spot 로티
+idScanAnimation(); // id 스캔 로티
+transferLoadingAnimation(); // transfer 로티 
+screeningAnimation(); // screening Animation
+inputClear(); // 인풋 clear
+switchButton(); // 스위치 버튼
+createBottomCtaSvg(); // bottom CTA 버튼 
+modalPop(); // 레이어 팝업 
 
-// listEffect()
-
-// function listEffect() {
-//     const listItem = document.querySelectorAll('[role="button"]');
-//     console.log(listItem);
-// }
 
 function inputClear() {
     const inputClearButton = document.querySelectorAll('.ts--input-clear');
@@ -39,6 +34,21 @@ function inputClear() {
         });
     
 }
+
+function pwHideShow() {
+    const pwShowButton = document.querySelector('.ts--pw-show');
+    pwShowButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        if(e.target.classList.contains('eye-on')) {
+            e.target.classList.remove('eye-on');
+            e.target.previousElementSibling.type = "password"
+        } else {
+            e.target.classList.add('eye-on');
+            e.target.previousElementSibling.type = "text"
+        }
+    })
+}
+
 
 function switchButton() {
     const switchButtonWrap = document.querySelectorAll('.ts--switch-buttons');
@@ -183,17 +193,18 @@ function createBottomCtaSvg() {
 
 }
 
+function modalPop() {
+    const modalPopEle = document.querySelectorAll('.ts--dialog-modal');
+    modalPopEle.forEach(function(modal){
+        if(modal.classList.contains('on')) {
+            modal.parentNode.setAttribute('data-status', 'open');
+            document.querySelector('.ts--dimmed').classList.add('on');
+            document.body.style.overflow = "hidden";
+        }
+    });
+}
+
 function preScreeningLoad() {
-    var colorChanging = anime.timeline({
-        targets: '.ts--subtitle1 .letter',
-        easing: 'easeInOutQuad',
-        direction: 'alternate',
-        loop: true,
-        delay: (el, i) => 150 * (i+1)
-    }).add({
-        color: '#6b7684'
-    }, '+=.1')
-    
     var preScreening = anime.timeline({
         easing: 'easeInOutQuad',
         duration: 900,
@@ -243,5 +254,19 @@ function preScreeningLoad() {
         opacity: 1,
     })
 }
+preScreeningLoad();
 
-
+function dialogModal() {
+    var modalOn = anime.timeline({
+        targets: '[data-status="open"] .ts--dialog-modal-wrapper',
+        easing: 'easeInOutQuad',
+        translateY: ['110%', 0],
+        duration: 700
+    }).add({
+        targets: '[data-status="open"] .ts--modal-item',
+        easing: 'easeInOutQuad',
+        translateY: ['100%', 0],
+        delay: anime.stagger(100)
+    })
+}
+dialogModal();
