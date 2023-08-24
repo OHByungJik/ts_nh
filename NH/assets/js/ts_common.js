@@ -36,16 +36,19 @@ function inputClear() {
 }
 
 function pwHideShow() {
-    const pwShowButton = document.querySelector('.ts--pw-show');
-    pwShowButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        if(e.target.classList.contains('eye-on')) {
-            e.target.classList.remove('eye-on');
-            e.target.previousElementSibling.type = "password"
-        } else {
-            e.target.classList.add('eye-on');
-            e.target.previousElementSibling.type = "text"
-        }
+    const pwShowButton = document.querySelectorAll('.ts--pw-show');
+
+    pwShowButton.forEach(function(pw){
+        pw.addEventListener('click', function(e) {
+            e.preventDefault();
+            if(e.target.classList.contains('eye-on')) {
+                e.target.classList.remove('eye-on');
+                e.target.previousElementSibling.type = "password"
+            } else {
+                e.target.classList.add('eye-on');
+                e.target.previousElementSibling.type = "text"
+            }
+        })
     })
 }
 
@@ -200,10 +203,12 @@ function modalPop() {
             modal.parentNode.setAttribute('data-status', 'open');
             document.querySelector('.ts--dimmed').classList.add('on');
             document.body.style.overflow = "hidden";
+            dialogModal();
         }
     });
 }
 
+/* Anime JS */ 
 function preScreeningLoad() {
     var preScreening = anime.timeline({
         easing: 'easeInOutQuad',
@@ -269,4 +274,3 @@ function dialogModal() {
         delay: anime.stagger(100)
     })
 }
-dialogModal();
